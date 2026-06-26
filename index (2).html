@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mudanças Climáticas e Produção Agrícola | Murillo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="top-member">Integrante: Murillo</p>
+        <span class="badge">Mudanças Climáticas • Produção Agrícola</span>
+        <h1>Mudanças climáticas e produção agrícola</h1>
+        <p>
+          Soluções práticas para enfrentar impactos climáticos, proteger lavouras e apoiar
+          decisões inteligentes no campo com tecnologia e sustentabilidade.
+        </p>
+        <div class="hero-actions">
+          <a href="#solucoes" class="btn primary">Explorar soluções</a>
+          <a href="#quiz" class="btn secondary">Testar quiz</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats">
+        <div class="stat">
+          <span>🌡️</span>
+          <strong>Clima extremo</strong>
+          <p>Mais calor, seca e eventos severos</p>
+        </div>
+        <div class="stat">
+          <span>💧</span>
+          <strong>Gestão da água</strong>
+          <p>Irrigação e uso eficiente dos recursos</p>
+        </div>
+        <div class="stat">
+          <span>🌱</span>
+          <strong>Solo protegido</strong>
+          <p>Produção mais resiliente e sustentável</p>
+        </div>
+      </section>
+
+      <section class="card-grid">
+        <article class="card">
+          <h2>O Desafio</h2>
+          <p>
+            A elevação da temperatura global e a irregularidade das chuvas afetam o calendário
+            agrícola, reduzem a produtividade e aumentam os custos de produção.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Conexão com o Campo</h2>
+          <p>
+            O tema destaca como o clima interfere diretamente na produção agrícola e reforça a
+            necessidade de adaptação, planejamento e uso consciente dos recursos naturais.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Base Científica</h2>
+          <p>
+            Estudos indicam queda de rendimento em culturas sensíveis ao estresse hídrico e térmico,
+            tornando indispensáveis técnicas de manejo sustentável.
+          </p>
+        </article>
+      </section>
+
+      <section id="solucoes" class="section">
+        <h2>Solução Tecnológica</h2>
+        <p class="section-text">
+          Ferramentas digitais para apoiar produtores no monitoramento climático, no manejo do solo
+          e na tomada de decisão.
+        </p>
+
+        <div class="solution-grid">
+          <article class="feature">
+            <div class="feature-head">
+              <span class="icon">1</span>
+              <h3>Simulador de Risco Climático</h3>
+            </div>
+            <p>
+              Use a região, a cultura e a temperatura prevista para estimar o impacto na irrigação.
+            </p>
+
+            <div class="form-group">
+              <label for="regiao">Região</label>
+              <select id="regiao">
+                <option>Norte</option>
+                <option>Nordeste</option>
+                <option>Centro-Oeste</option>
+                <option>Sudeste</option>
+                <option>Sul</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cultura">Cultura</label>
+              <select id="cultura">
+                <option>Soja</option>
+                <option>Milho</option>
+                <option>Trigo</option>
+                <option>Feijão</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="temp">Aumento previsto de temperatura (°C)</label>
+              <input id="temp" type="number" value="2" min="0" max="10" />
+            </div>
+
+            <button class="btn primary" onclick="calcularRisco()">Calcular risco</button>
+            <p id="resultado" class="result"></p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-head">
+              <span class="icon">2</span>
+              <h3>Assistente Virtual</h3>
+            </div>
+            <p>
+              Orienta sobre sintomas de estresse climático nas plantas e medidas de manejo imediato.
+            </p>
+            <div class="chat-box">
+              <p class="chat-msg bot">Olá! Conte o que está acontecendo na lavoura e eu sugiro ações.</p>
+              <p class="chat-msg user">Folhas enroladas e solo muito seco.</p>
+              <p class="chat-msg bot">
+                Isso pode indicar estresse hídrico. Priorize irrigação eficiente, cobertura do solo
+                e monitoramento da umidade.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature" id="quiz">
+            <div class="feature-head">
+              <span class="icon">3</span>
+              <h3>Quiz Interativo</h3>
+            </div>
+            <p>Teste seus conhecimentos sobre mudanças climáticas e produção agrícola.</p>
+
+            <div class="quiz-item">
+              <strong>1. O plantio direto ajuda a:</strong>
+              <button class="quiz-btn" onclick="responderQuiz(true, this)">Reduzir erosão</button>
+              <button class="quiz-btn" onclick="responderQuiz(false, this)">Aumentar o desmatamento</button>
+            </div>
+
+            <div class="quiz-item">
+              <strong>2. Coberturas vegetais servem para:</strong>
+              <button class="quiz-btn" onclick="responderQuiz(true, this)">Conservar a umidade do solo</button>
+              <button class="quiz-btn" onclick="responderQuiz(false, this)">Eliminar a biodiversidade</button>
+            </div>
+
+            <p id="score" class="result">Pontuação: 0</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section conclusion">
+        <h2>Conclusão</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Benefícios Econômicos</h3>
+            <p>Menos perdas, melhor aproveitamento dos insumos e maior estabilidade produtiva.</p>
+          </article>
+          <article class="card">
+            <h3>Impactos Ambientais</h3>
+            <p>Uso racional da água, conservação do solo e fortalecimento da agricultura sustentável.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
